@@ -37,6 +37,7 @@ my_data <- my_data_split %>%
 
 # List of columns to convert (all except Date and Events)
 cols_to_convert <- setdiff(names(my_data), c("Date", "Events"))
+
 # Convert specified columns to numeric
 my_data <- my_data %>%
   mutate(across(all_of(cols_to_convert), as.numeric))
@@ -108,7 +109,7 @@ poly
 
 
 my_lm <-  lm(TempHighF ~
-               TempLowF+DewPointHighF+HumidityHighPercent+
+               TempLowF+DewPointHighF*HumidityHighPercent+
                SeaLevelPressureLowInches+ Event_Rain *Event_Thunderstorm , 
              data = my_data)
 

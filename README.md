@@ -1,5 +1,5 @@
 # Weather_Prediction-Model
-This regression model will predict the daily temperature in the morning
+This app uses regression model to predict the daily temperature high by early morning stats
 Objective:
 predict the temperature high in Austin Texas in order to better prepare for the day’s weather.
 
